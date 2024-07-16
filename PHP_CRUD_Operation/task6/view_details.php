@@ -7,7 +7,6 @@ session_start();
 <head>
     <title>View Details</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 <form action="view_details.php" method="get" class="form-container">
@@ -21,11 +20,8 @@ session_start();
                 <option value="phone" <?php echo isset($_GET['sort']) && $_GET['sort'] == 'phone' ? 'selected' : ''; ?>>Phone Number</option>
             </select>
             <input type="submit" value="Sort">
-
 </form>
-
     <h2>View Details</h2>
-
     <!-- Display Records -->
     <table border="1" class="styled-table">
         <tr>
@@ -45,8 +41,6 @@ $search_query = "";
 if (isset($_GET['query'])) {
     $search_query = $_GET['query'];
 }
-
-
 $sort_by = "name";
 if (isset($_GET['sort'])) {
     $sort_by = $_GET['sort'];
@@ -66,7 +60,6 @@ $sort_by = "usn";
 if (isset($_GET['sort'])) {
     $sort_by = $_GET['sort'];
 }
-
 $sql = "SELECT * FROM students ORDER BY $sort_by";
 
 $sort_by = "phone";

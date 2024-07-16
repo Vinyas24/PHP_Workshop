@@ -16,7 +16,6 @@
     <form action="view_details.php" method="get" class="form-container">
         <input type="submit" value="View Records">
     </form>
-
     <?php
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];

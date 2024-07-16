@@ -3,11 +3,9 @@
 <head>
     <title>Update Details</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <h2>Update Details</h2>
-
     <?php
     $id = $_POST['id'];
 
@@ -15,10 +13,8 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
     $sql = "SELECT * FROM students WHERE id='$id'";
     $result = $conn->query($sql);
-
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
     ?>
@@ -52,7 +48,6 @@
         } else {
             echo "Error updating record: " . $conn->error;
         }
-
         $conn->close();
         header("Location: view_details.php");
     }

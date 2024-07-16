@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .form-container {
     display: flex;
     flex-direction: column;
@@ -12,7 +11,6 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
-
 .search-input, .sort-select, .search-button {
     padding: 10px;
     margin: 5px;
@@ -20,7 +18,6 @@ body {
     border-radius: 40px;
     font-size: 16px;
 }
-
 .search-button {
     background-color: #4CAF50;
     color: rgb(119, 57, 57);
